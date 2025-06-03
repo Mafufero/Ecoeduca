@@ -1,0 +1,250 @@
+/* este es para que la pagina tenga un estilo base*/
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f4f8;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* para que todo lo que va dentro de la clase navbar, tenga diseño */
+.navbar {
+    background-color: #222;
+    color: #fff;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.loguito {
+    font-size: 24px;
+    font-weight: bold;
+    color: #00b894;
+    letter-spacing: 2px;
+}
+
+.nav-link {
+    list-style-type: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-link li {
+    margin: 0 15px;
+}
+
+.nav-link a {
+    color: #ddd;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.nav-link a:hover {
+    color: #00b894;
+}
+
+
+.hero-section {
+
+    background-position: center;
+    background-attachment: fixed;
+    padding: 100px 20px;
+    text-align: center;
+    color: #fff;
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0,0.4); /* oscurecer para legibilidad */
+}
+
+.hero-section h1 {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px #000;
+}
+
+.hero-section p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+    text-shadow: 1px 1px 3px #000;
+}
+
+
+footer {
+    background-color: #222;
+    color: #bbb;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+    margin-top: auto;
+}
+
+/* este es parte del menu hamburguesa*/
+.menu-toggle {
+    display: none;
+}
+
+.burger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.burger span {
+    height: 3px;
+    width: 25px;
+    background: white;
+    margin: 4px 0;
+    border-radius: 2px;
+}
+
+/*  */
+@media (max-width: 768px) {
+    .burger {
+        display: flex;
+    }
+
+    .nav-link {
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #222;
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out;
+    }
+
+    .nav-link li {
+        margin: 15px 0;
+        text-align: center;
+    }
+
+    .menu-toggle:checked ~ .nav-link {
+        display: flex;
+        max-height: 300px;
+    }
+}
+
+.burger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    justify-content: center;
+    height: 24px;
+    z-index: 2; 
+    padding: 5px;
+}
+
+.burger span {
+    height: 3px;
+    width: 25px;
+    background: white;
+    margin: 4px 0;
+    border-radius: 2px;
+    transition: all 0.4s ease;
+}
+
+/* Transforma las líneas en una "X" cuando el menú se abre */
+.menu-toggle:checked + .burger span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-toggle:checked + .burger span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle:checked + .burger span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+html {
+    scroll-behavior: smooth;
+}
+.galeria {
+    padding: 60px 20px;
+    background-color: #eaf6f6;
+    text-align: center;
+}
+
+.galeria h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.card {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    overflow: hidden;
+    max-width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card h3 {
+    margin: 15px 0 10px;
+    font-size: 1.2rem;
+    color: #00b894;
+}
+
+.card p {
+    font-size: 0.95rem;
+    padding: 0 15px 20px;
+    color: #555;
+}
+
+
+.contact-button-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.contact-button {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    background-color: #00b894; 
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+
+.contact-button:hover {
+    background-color: #019c73; 
+    transform: translateY(-5px);
+}
+
+
+.contact-button:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 255, 179, 0.8);
+}
