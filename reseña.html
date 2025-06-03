@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reseña de Página</title>
+    <link rel="stylesheet" href="css/reseña.css">
+    <link rel="stylesheet" href="css/animate.css">
+</head>
+<body>
+    <nav id="navbar">
+        <ul>
+            <li class="a1"><a href="index.html">Home</a></li>
+            <li class="a1"><a href="segunda_pagina.html">Microplásticos</a></li>
+            <li class="a1"><a href="reseña.html">Reseñanos</a></li>
+        </ul>
+    </nav>
+
+    <section id="hola">
+    <form id="miFormulario" action="#">
+
+        <h1 class="titulo">¿QUÉ TE PARECIÓ LA PÁGINA?</h1>
+
+        <div class="cuadro">
+            <div class="dos">
+                <!-- primer campo-->
+            <div class="campo" id="nom">
+                <label for="name">Nombre:</label>
+                <input type="text" name="Nombre" id="name" required>
+            </div>
+                 <!-- segundo campo-->
+            <div class="campo" id="com">
+                <label for="comentarios">Comentarios:</label>
+                <textarea id="comentarios" rows="5" cols="30" required></textarea>
+            </div>
+            </div>
+        </div>
+        </section>
+
+
+        <section id="section3">
+            <div class="texto">
+                <h2>CADA GRANO CUENTA</h2>
+                <p>
+                    La contaminación del ambiente es un problema global que afecta a todos los seres vivos. 
+                    Aunque el plástico es uno de los contaminantes más conocidos, existen muchos otros que también 
+                    afectan nuestro entorno. Cada pequeño esfuerzo cuenta para reducir la contaminación y proteger 
+                    nuestro planeta. ¡Juntos podemos hacer la diferencia!
+                </p>
+            </div>
+            <div class="texto">
+                <img src="img/7f995803-0e8e-44cc-baee-d8883bbfdd79.jpg" alt="">
+            </div>
+
+        </section>
+
+
+
+        
+<div class="Estrellas">
+        <h2 class="subtitulo">RESEÑA LA PÁGINA</h2>
+
+        <div class="rating">
+            <input type="radio" name="rate" id="star5" value="5"><label for="star5"></label>
+            <input type="radio" name="rate" id="star4" value="4"><label for="star4"></label>
+            <input type="radio" name="rate" id="star3" value="3"><label for="star3"></label>
+            <input type="radio" name="rate" id="star2" value="2"><label for="star2"></label>
+            <input type="radio" name="rate" id="star1" value="1"><label for="star1"></label>
+        </div> 
+
+        <div class="botones">
+            <input type="submit" value="Enviar" >
+            <input type="reset" value="Limpiar">
+        </div>
+        </div>
+    </form>
+    <script>
+        document.getElementById("miFormulario").addEventListener("submit", function(event) {
+            const estrellas = document.querySelector('input[name="rate"]:checked');
+            
+            if (!estrellas) {
+                alert("Por favor selecciona una calificación con estrellas.");
+                event.preventDefault(); // evita que se envíe el formulario
+            }
+        });
+        </script>
+
+
+    <footer>
+        <p>© 2023 EcoEduca. Todos los derechos reservados.</p>
+        <p>Desarrollado por LAWLIET</p>
+    </footer>
+</body>
+</html>
